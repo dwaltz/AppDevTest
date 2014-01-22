@@ -18,7 +18,7 @@ app.configure( function() {
 	app.set( 'port', process.env.PORT || 4200 );
 
 	// serving front-facing app from static place
-	app.use( express.static( __dirname + 'public' ) );
+	app.use( express.static( __dirname + '/public' ) );
 
 	// Simulation for PUT and DELETE
 	app.use( express.methodOverride() );
