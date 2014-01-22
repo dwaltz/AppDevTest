@@ -1,7 +1,6 @@
 'use strict';
 
 var data = require( '../data/data.json' );
-var _ = require('underscore');
 var express = require('express');
 
 module.exports = function( server ) {
@@ -26,9 +25,13 @@ module.exports = function( server ) {
 		if( !req.params.id ) res.send( JSON.stringify({error:'invalid id'}) );
 		if ( !req.session.dataset ) req.session.dataset = data;
 
-		item = _.find(req.session.dataset, function(item){
-			return item.id == req.params.id;
-		});
+		for (var index = 0; index <= req.session.dataset.length - 1; index++  ) {
+			if( req.session.dataset[index].id == req.params.id ){
+				item = req.session.dataset[index];
+				index = req.session.dataset.length;
+			}
+		}
+
 		if( !item ) item = {error:'invalid id'};
 		res.send( JSON.stringify(item) );
 	});
