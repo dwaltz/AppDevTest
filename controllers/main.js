@@ -33,7 +33,7 @@ module.exports = function( server ) {
 		res.send( JSON.stringify(item) );
 	});
 
-	//route for editing an object/creating an object
+	//route for editing/creating an object
 	server.post('/data/:id', express.json(), function( req, res ){
 		var editIndex;
 
@@ -49,6 +49,7 @@ module.exports = function( server ) {
 		}
 
 		if( editIndex === 0 || editIndex ){
+			//editing object
 			if( req.body ){
 				for( var prop in req.body ){
 					if( req.session.dataset[editIndex][prop] ) req.session.dataset[editIndex][prop] = req.body[prop];
@@ -58,7 +59,17 @@ module.exports = function( server ) {
 				res.send( JSON.stringify({error:'no payload submitted'}) );
 			}
 		} else {
-			res.send( JSON.stringify({error:'invalid id'}) );
+			//creating an object
+			if( req.body ){
+				if( req.body.id ){
+					req.session.dataset.push(req.body);
+					res.send( JSON.stringify(req.session.dataset[editIndex]) );
+				} else {
+					res.send( JSON.stringify({error:'payload must contain id parameter'}) );
+				}
+			} else {
+				res.send( JSON.stringify({error:'no payload submitted'}) );
+			}
 		}
 	});
 
