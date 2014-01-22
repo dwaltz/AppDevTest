@@ -1,3 +1,44 @@
-{
-	"name": "blah"
-}
+[
+	{
+		"id":"1",
+		"name":"David Waltz",
+		"title":"Software Engineer",
+		"age":"27",
+		"favoriteColor":"blue"
+	},
+	{
+		"id":"2",
+		"name":"Matt Beard",
+		"title":"Director",
+		"age":"35",
+		"favoriteColor":"red"
+	},
+	{
+		"id":"3",
+		"name":"Kevin Parkerson",
+		"title":"Sr. Software Engineer",
+		"age":"26",
+		"favoriteColor":"orange"
+	},
+	{
+		"id":"4",
+		"name":"Neil Merchant",
+		"title":"Software Engineer",
+		"age":"25",
+		"favoriteColor":"pink"
+	},
+	{
+		"id":"5",
+		"name":"Indiana Jones",
+		"title":"Product Consultant",
+		"age":"49",
+		"favoriteColor":"fuchsia"
+	},
+	{
+		"id":"6",
+		"name":"Narwhal",
+		"title":"Unicorn of the Sea",
+		"age":"33",
+		"favoriteColor":"He's a whale. blue"
+	}
+]
