@@ -61,7 +61,8 @@ module.exports = function( server ) {
 		} else {
 			//creating an object
 			if( req.body ){
-				if( req.body.id ){
+				if( req.params.id ){
+					req.body.id = req.params.id;
 					req.session.dataset.push(req.body);
 					res.send( JSON.stringify(req.session.dataset[editIndex]) );
 				} else {
