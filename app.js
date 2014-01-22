@@ -15,7 +15,7 @@ app.configure( function() {
 	app.use( express.compress() );
 
 	// setting http server port
-	app.set( 'port', process.env.PORT || 4200 );
+	app.set( 'port', process.env.PORT || 7000 );
 
 	// serving front-facing app from static place
 	app.use( express.static( __dirname + '/public' ) );
