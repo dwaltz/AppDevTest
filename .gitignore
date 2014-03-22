@@ -5,3 +5,5 @@ node_modules
 .idea/
 
 # misc
+bower_components
+public/vendor

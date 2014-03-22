@@ -1,0 +1,26 @@
+{
+  "name": "application-developer-test",
+  "version": "0.1.0",
+  "description": "Client side web application developer test",
+  "authors": [
+    "David Waltz"
+  ],
+  "dependencies": {
+    "requirejs": "2.1.9",
+    "jquery": ">=1.11.0",
+    "backbone": "1.1.2",
+    "handlebars": "1.3.0",
+    "underscore": "1.5.2",
+    "json2": "*",
+    "fuelux": "~2.5.2",
+    "requirejs-text": "~2.0.10"
+  },
+  "install" : {
+	"path" : "public/vendor/",
+	"sources" : {
+		"requirejs": "bower_components/requirejs/require.js",
+		"json2": "bower_components/json2/json2.js",
+		"fuelux": "bower_components/fuelux/dist/all.js"
+	}
+  }
+}
